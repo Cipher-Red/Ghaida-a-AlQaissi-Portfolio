@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghaida’a AlQaissi | Portfolio</title>
+    <style>
+        /* General Reset */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple colors */
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8); /* Lighter text color */
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: rgba(255, 255, 255, 0.9); /* Subtle opacity for blending */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #6A1B9A; /* Neon Coral accent */
+            text-shadow: 0 0 5px #6A1B9A, 0 0 10px #6A1B9A; /* Glow effect */
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 30px 20px;
+            background-color: #444;
+            text-align: center; /* Center-align text in sections */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: #6A1B9A;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            margin: 0 auto;
+            max-width: 800px;
+            font-size: 1.1em;
+            text-align: justify; /* Justify the text */
+        }
+
+        /* Projects Container */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Individual Project Box */
+        .project-box {
+            background-color: #fff; /* White background for better contrast */
+            border: 1px solid #ececec;
+            padding: 20px;
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+            border-radius: 8px;
+            color: #333; /* Dark text color for better readability */
+        }
+
+        /* Project Title */
+        .project-box h3 {
+            font-size: 1.5em;
+            color: #6A1B9A; /* Purple color for project titles */
+            margin-bottom: 10px;
+        }
+
+        /* Project Description */
+        .project-box p {
+            color: #444; /* Dark text color for description */
+        }
+
+        /* Hover effect */
+        .project-box:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple colors */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1em;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+        }
+
+        footer p {
+            margin: 5px;
+            font-weight: 300;
+        }
+
+
+
+        /* Links Hover Effect */
+        a:hover {
+           
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ghaida’a AlQaissi</h1>
+        <p>Artificial Intelligence Specialist | Fresh Graduate</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills & Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a recent graduate with a Bachelor’s degree in Artificial Intelligence and Data Science, specializing in developing AI-driven solutions. I am passionate about using machine learning, computer vision, and data science techniques to solve complex problems and drive innovation.
+            </p>
+            <p>
+                My internship at SHAI for AI allowed me to gain hands-on experience with Python, machine learning frameworks like TensorFlow and Keras, and data visualization tools such as WEKA. These experiences, combined with my strong analytical and problem-solving skills, have prepared me to contribute effectively to AI projects.
+            </p>
+            <p>
+                Eager to apply my knowledge and continue learning, I am excited to explore opportunities in AI that create impactful solutions and drive technological advancement.
+            </p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>Zarqa University</strong> | October 2020 - June 2024</p>
+            <p>Bachelor of Science (B.S) in Artificial Intelligence and Data Science</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <p><strong>SHAI for AI</strong> | Intern | February 2023 - July 2023</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Certifications & Skills</h2>
+            <h3>Certifications:</h3>
+            <ul>
+                <li>“Hands only CPR” Campaign | Princess Nourah Bint Abdulrahman University | 2017</li>
+                <li>English Placement Test - MLCPT (B2 CEFR Level)</li>
+            </ul>
+
+            <h3>Technical Skills:</h3>
+            <ul>
+                <li>Microsoft Office: Word, Excel, PowerPoint</li>
+                <li>Programming Languages: Python, Java, HTML5, C#</li>
+                <li>Machine Learning: Data visualization, data mining, WEKA</li>
+                <li>Computer Vision: Object detection, image recognition, image segmentation</li>
+                <li>Deep Learning Frameworks: PyTorch, Keras, TensorFlow, Scikit-learn</li>
+            </ul>
+
+            <h3>Non-Technical Skills:</h3>
+            <ul>
+                <li>Time Management, Critical Thinking, Teamwork, Problem Solving</li>
+            </ul>
+
+            <h3>Languages:</h3>
+            <ul>
+                <li>Arabic (Native), English (Fluent), Filipino (Beginner)</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-box">
+                    <h3>Graduation Project: Skin Disease Classification Website (DermAware)</h3>
+                    <p>A web application designed to classify skin diseases using machine learning models and image recognition.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Interactive Chatbots</h3>
+                    <p>Development of chatbots for various use cases, from customer service to interactive learning systems.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Facial Recognition and Identification System</h3>
+                    <p>A system designed to recognize and verify individuals using facial recognition technology.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Sign Language Gesture Recognition System</h3>
+                    <p>A machine learning system to translate sign language gestures into text or speech.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Body Proportion Measurement System</h3>
+                    <p>A system for measuring body proportions using computer vision and image processing techniques.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Virtual Glasses Try-On with Dynamic Scaling System</h3>
+                    <p>Web application for virtual glasses fitting, using augmented reality and scaling systems.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Restaurant Digital Menu System</h3>
+                    <p>A digital menu system for restaurants, with support for images, descriptions, and customer feedback.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Machine Learning-Based Diamond Price Estimation System</h3>
+                    <p>A system that estimates the price of diamonds based on various characteristics using machine learning algorithms.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Virtual Assistant (Alexa/Jarvis AI)</h3>
+                    <p>Development of a virtual assistant that can perform tasks through voice commands.</p>
+                </div>
+                <div class="project-box">
+                    <h3>Virtual Mouse via Eye Detection</h3>
+                    <p>A system that allows controlling a mouse cursor using eye movements through computer vision techniques.</p>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <p>Contact Me: ghaidaaalqaissi@gmail.com | (+962) 776380081</p>
+        <p>Amman, Jordan | Dair Ghabar, Haram Ben Qutbah St.</p>
+    </footer>
+</body>
+</html>
