@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghaida’a AlQaissi | Portfolio</title>
+    <title>Ghaida’a AlQaissi | AI Portfolio</title>
     <style>
         /* General Reset */
-        body {
-            font-family: 'Georgia', serif;
+        * {
             margin: 0;
             padding: 0;
-            color: #fff;
-            background-color: #333;
-            text-align: center;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f; /* Dark blue background */
+            color: #ccd6f6; /* Light text color */
             line-height: 1.8;
             display: flex;
             flex-direction: column;
@@ -21,24 +24,40 @@
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple colors */
+            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple gradient */
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             flex-grow: 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 10; /* Ensure header is above other elements */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.01%);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            z-index: -1; /* Move the pattern behind the content */
         }
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: 700;
             letter-spacing: 2px;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            color: #64ffda; /* Teal accent */
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
         }
 
         header p {
@@ -46,7 +65,6 @@
             margin-top: 10px;
             font-weight: 300;
             color: rgba(255, 255, 255, 0.8); /* Lighter text color */
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
         }
 
         header nav ul {
@@ -70,20 +88,36 @@
         }
 
         header nav ul li a:hover {
-            color: #6A1B9A; /* Neon Coral accent */
-            text-shadow: 0 0 5px #6A1B9A, 0 0 10px #6A1B9A; /* Glow effect */
+            color: #64ffda; /* Teal accent */
+            text-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda; /* Glow effect */
         }
 
         /* Section Styling */
         .section {
-            padding: 30px 20px;
-            background-color: #444;
-            text-align: center; /* Center-align text in sections */
+            padding: 60px 20px;
+            background-color: #1a1a2e; /* Dark purple background */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure sections are below the header */
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 10.01%);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            z-index: -1; /* Move the pattern behind the content */
         }
 
         h2 {
-            font-size: 2.2em;
-            color: #6A1B9A;
+            font-size: 2.5em;
+            color: #64ffda; /* Teal accent */
             margin-bottom: 20px;
         }
 
@@ -92,6 +126,24 @@
             max-width: 800px;
             font-size: 1.1em;
             text-align: justify; /* Justify the text */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #64ffda; /* Teal accent */
         }
 
         /* Projects Container */
@@ -105,37 +157,36 @@
 
         /* Individual Project Box */
         .project-box {
-            background-color: #fff; /* White background for better contrast */
-            border: 1px solid #ececec;
+            background-color: #2c1a47; /* Dark purple background */
+            border: 1px solid #6A1B9A; /* Purple border */
             padding: 20px;
             width: calc(33% - 20px);
             box-sizing: border-box;
             transition: all 0.3s ease-in-out;
             border-radius: 8px;
-            color: #333; /* Dark text color for better readability */
+            color: #ccd6f6; /* Light text color */
+        }
+
+        .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(154, 27, 106, 0.3); /* Purple shadow */
         }
 
         /* Project Title */
         .project-box h3 {
             font-size: 1.5em;
-            color: #6A1B9A; /* Purple color for project titles */
+            color: #64ffda; /* Teal accent */
             margin-bottom: 10px;
         }
 
         /* Project Description */
         .project-box p {
-            color: #444; /* Dark text color for description */
-        }
-
-        /* Hover effect */
-        .project-box:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
+            color: #8892b0; /* Lighter text color */
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple colors */
+            background: linear-gradient(135deg, #9C4D97, #6A1B9A); /* BTS Purple gradient */
             color: white;
             text-align: center;
             padding: 30px 20px;
@@ -154,13 +205,6 @@
             font-weight: 300;
         }
 
-
-
-        /* Links Hover Effect */
-        a:hover {
-           
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .projects-container {
@@ -169,10 +213,36 @@
             }
 
             .project-box {
-                width: 80%;
+                width: 90%;
                 margin-bottom: 20px;
             }
         }
+
+header {
+    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(135deg, #9C4D97, #6A1B9A, #FFD700, #FF6F61);
+    background-size: 400% 400%;
+}
+
+footer {
+    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(135deg, #9C4D97, #6A1B9A, #FFD700, #FF6F61);
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -192,6 +262,11 @@
     </header>
 
     <main>
+	<!-- Add this to your header or body -->
+<div class="butterfly butterfly-1"></div>
+<div class="butterfly butterfly-2"></div>
+<div class="butterfly butterfly-3"></div>
+	
         <section id="about" class="section">
             <h2>About Me</h2>
             <p>
@@ -289,10 +364,12 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <footer>
         <p>Contact Me: ghaidaaalqaissi@gmail.com | (+962) 776380081</p>
         <p>Amman, Jordan | Dair Ghabar, Haram Ben Qutbah St.</p>
+		 <p>Portfolio created by <a href="https://qaisalqaissi.netlify.app" target="_blank" style="color: #00b3b3;">Qais Alqaissi</a></p>
     </footer>
 </body>
 </html>
